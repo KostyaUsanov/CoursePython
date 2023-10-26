@@ -1,7 +1,7 @@
-total = 0
+total = 1
 
 while True:
-    number = ...  # TODO Запросите первое и последующие числа в цикле
+    number = "stop"
 
     if number == "stop":
         break
