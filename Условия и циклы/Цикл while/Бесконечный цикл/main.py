@@ -1,7 +1,7 @@
-total = 1
+total = 0
 
 while True:
-    number = "stop"
+    number = input("Введите число (или 'stop' для завершения): ")   # TODO Запросите первое и последующие числа в цикле
 
     if number == "stop":
         break
