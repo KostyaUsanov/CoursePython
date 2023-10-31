@@ -1,14 +1,15 @@
 list_numbers = [2, 90, -2, 8, -36, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
 
-max_index = 0
-max_value = list_numbers[max_index]
+max_i = max(list_numbers)# TODO Поменяйте местами значения согласно условию
 
-# Находим максимальное значение и его индекс
-for i, current_value in enumerate(list_numbers):
-    if current_value >= max_value:
-        max_value = current_value
-        max_index = i
+index_max = -1
+for idx, value in enumerate(list_numbers):
+    if value == max_i:
+        index_max = idx
 
-# Меняем местами последний максимальный и последний элементы
-list_numbers[max_index], list_numbers[-1] = list_numbers[-1], list_numbers[max_index]
+list_numbers[index_max], list_numbers[-1] = list_numbers[-1], list_numbers[index_max]
+
+
+
+
 print(list_numbers)  # Ответ [2, 90, -2, 8, -36, -44, -1, -85, -14, 25, -22, -90, -100, -8, 38, -92, -45, 67, 53, 90]

@@ -10,7 +10,7 @@ print(words)  # ['Python', 'is', 'an', 'amazing', 'language']
 
 # Разбиение строки указанному разделителю
 data = "apple,orange,banana"
-fruits = data.split(',')
+fruits = data.split(",")
 print(fruits)  # ['apple', 'orange', 'banana']
 
 # Приведение первого символа строки к нижнему регистру, а остальных к нижнему
