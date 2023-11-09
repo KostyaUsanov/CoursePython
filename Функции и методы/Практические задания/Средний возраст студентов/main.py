@@ -1,6 +1,8 @@
 # TODO Напишите функцию calculate_average_age для расчета среднего возраста студентов
-
-
+def calculate_average_age(students):
+    all = students.values()
+    avarage = sum(all) / len(all)
+    return avarage
 students_dict = {
     'Саша': 27,
     'Кирилл': 52, 
@@ -9,4 +11,4 @@ students_dict = {
     'Оля': 43, 
 }
 
-print(f"Средний возраст студентов: {...)} лет")  # TODO Распечатайте средний возраст студентов
+print(f"Средний возраст студентов: {calculate_average_age(students_dict)}")  # TODO Распечатайте средний возраст студентов
