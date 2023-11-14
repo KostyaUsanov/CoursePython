@@ -1,3 +1,4 @@
-ladder = 4   # TODO С помощью цикла for распечатайте лесенку
-for i in range(1, ladder+1):
-    print("1" * i)
+# TODO С помощью цикла for распечатайте лесенку
+count = 4
+for i in range(1, count+1):
+    print("*" * i)

@@ -1,5 +1,5 @@
 # TODO реализовать функцию
-def get_sentences_list():
+def get_sentences_list(text):
     ...
 
 

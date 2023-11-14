@@ -6,6 +6,10 @@ students = [
     {"name": "Кирилл", "grade": 2},
     {"name": "Оля", "grade": 4},
 ]
-for student in students:
-    if student["grade"] > 3:
-        print(f'{student["name"]}. Оценка: {student["grade"]}')
+
+
+for stu in students:
+    if stu["grade"] > 3:
+        print(f'{stu["name"]}. Оценка: {stu["grade"]}')
+
+

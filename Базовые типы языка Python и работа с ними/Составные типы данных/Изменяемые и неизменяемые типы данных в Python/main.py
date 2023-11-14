@@ -1,11 +1,7 @@
-# TODO исправьте опечатку в слове
 fruits = ["яблоко", "банан", "опельсин", "виноград"]
-incorrect_word = fruits[2]
-correct_word = "а" + incorrect_word[1:]
-fruits[2] = correct_word
-print(fruits)
-fruits = ["яблоко", "банан", "опельсин", "виноград"]
-incorrect_word = fruits[2]
-correct_word = "а" + incorrect_word[1:]
-fruits[2] = correct_word
+orange = fruits[2]
+
+norm_orange = "а" + orange[1:]
+fruits[2] = norm_orange
+
 print(fruits)

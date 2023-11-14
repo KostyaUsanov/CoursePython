@@ -1,5 +1,5 @@
-str_ = "abcabcabcf"
+str_ = "sdkfjsdkjfnksjdnfkjsdnfkjsndfkjsndfkjsndfkjsnd"
 
 # TODO найдите и распечатайте количество уникальных символов в строке
-a = len(set(str_))
-print(a)
+str_ = len(set(str_))
+print(str_)
