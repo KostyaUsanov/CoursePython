@@ -13,10 +13,10 @@ def count_letters(text):
     return main_str_res
 
 
- # def calculate_frequency(letter):
- #    count_letters(text)
- #    new_dict_ = {}
- #    main_str_len = len(count_letters())
+def calculate_frequency(letter):
+    res = count_letters(letter)
+    new_dict = {}
+ main_str_len = len(count_letters())
 # TODO Напишите функцию calculate_frequency
 
 
