@@ -1,8 +1,8 @@
 # TODO реализовать функцию
 def get_unique_words(a):
-    unique_words = a.split()
-    unique_words = list(set(unique_words))
-    unique_words.sort()
-    return unique_words
+    a = list(set(a.split()))
+    a.sort()
+    return a
+
 
 print(get_unique_words("Здесь много разных слов. Возможно и много повторений."))

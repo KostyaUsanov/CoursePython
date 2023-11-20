@@ -13,8 +13,8 @@ def count_letters(text):
     return main_str_res
 
 
-def calculate_frequency(letter):
-    res = count_letters(letter)
+def calculate_frequency(text):
+    res = count_letters(text)
     sum_ = sum(res.values())
 
     new_dict = {}

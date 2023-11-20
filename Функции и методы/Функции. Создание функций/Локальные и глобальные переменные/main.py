@@ -13,7 +13,7 @@ def calculate_area(r):
     return area
 
 
-radius = 6
+radius = 5
 print(f"Длина окружности с радиусом {radius}: {calculate_circumference(radius):.4f}")
 print(f"Площадь круга с радиусом {radius}: {calculate_area(radius):.4f}")
 

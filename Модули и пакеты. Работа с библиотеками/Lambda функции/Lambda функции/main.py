@@ -2,9 +2,10 @@
 def square(x):
     return x ** 2
 
-
-print(square)  # Объект функция square
+a = square(40)
+print(a)  # Объект функция square
 
 
 # Использование lambda функции
+
 print(lambda x: x ** 2)  # Объект lambda функция
