@@ -1,8 +1,12 @@
 # TODO Импортируйте модуль json
+import json
 
 
 def serialize_to_json_str(python_obj: dict) -> str:
-    ...  # TODO Сериализуйте python объект в json строку с отступами
+    json_data = json.dumps(python_obj, indent=4)
+    return json_data
+
+     # TODO Сериализуйте python объект в json строку с отступами
 
 
 if __name__ == '__main__':

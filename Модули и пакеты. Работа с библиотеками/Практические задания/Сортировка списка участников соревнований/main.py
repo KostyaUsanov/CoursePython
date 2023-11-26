@@ -1,5 +1,8 @@
 # TODO Напишите функцию sort_participants
 
+def sort_participants(people: list[dict]) -> list:
+    list_ = sorted(people, key=lambda p: p["name"])
+    return list_
 
 if __name__ == "__main__":
     participants_list = [
@@ -24,5 +27,4 @@ if __name__ == "__main__":
             "age": 43,
         },
     ]
-
-    print(sort_participants(participants_list))
+print(sort_participants(participants_list))

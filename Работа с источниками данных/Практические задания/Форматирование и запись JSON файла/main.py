@@ -5,6 +5,14 @@ OUTPUT_FILE = "output.json"
 
 
 def task() -> None:
+    with open(INPUT_FILE, "r", encoding="utf-8") as inp:
+        j = json.load(inp)
+
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as o:
+        json.dump(j, o, indent=4, ensure_ascii=False)
+
+
+
     ...  # TODO Десериализуйте содержимое файла из переменной INPUT_FILE
 
     ...  # TODO Сериализуйте содержимое в файл из переменной INPUT_FILE
