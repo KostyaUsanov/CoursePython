@@ -20,11 +20,13 @@
 
 from typing import Union, Optional
 
-EMPTY_CELL = [1, 2, 3, "\n",
-              4, 5, 6, "\n",
-              7, 8, 9
-              ]
-print(EMPTY_CELL)
+EMPTY_CELL = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+    ]
+
+
 
 def init_field(size: int, empty_cell: str = EMPTY_CELL) -> list[list]:
     """
@@ -45,7 +47,13 @@ def draw_field(field):
     :param field: Объект поля
     :return: None
     """
-    pass  # TODO Написать реализацию
+    f = field
+    for row in f:
+        for cell in row:
+            print(cell, end="  ")
+        print()
+
+    # pass  # TODO Написать реализацию
 
 
 def get_int_val(text: str, border: tuple[int, int] = None) -> int:
