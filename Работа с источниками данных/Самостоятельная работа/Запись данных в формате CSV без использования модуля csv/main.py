@@ -4,6 +4,18 @@ OUTPUT_FILE = "output.csv"
 
 
 # TODO реализовать функцию to_csv_file
+def to_csv_file(filename, headers, rows, delimiter=",", new_line="\n"):
+    with open(filename, "w") as f:
+        f.write(delimiter.join(headers))
+        f.write(new_line)
+
+        for row in rows:
+            fr = [str(r) for r in row]
+            f.write(delimiter.join(fr))
+            f.write(new_line)
+
+
+
 
 
 if __name__ == '__main__':
@@ -16,6 +28,7 @@ if __name__ == '__main__':
         ['-118.360000', '33.820000', '28.000000', '67.000000', '15.000000', '49.000000', '11.000000', '6.135900', '330000.000000'],
     ]
 
+    to_csv_file(OUTPUT_FILE, headers_list, data)
     # TODO Вызовете функцию to_csv_file и запишите данные в файл
 
     # Нужно для проверки задания
