@@ -26,9 +26,10 @@ EMPTY_CELL = [
     [7, 8, 9]
     ]
 
+WIN_Lines = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
 
 
-def init_field(size: int, empty_cell: str = EMPTY_CELL) -> list[list]:
+def init_field(size: int) -> list[list]:
     """
     Создаёт и возвращет пустое поле для игры
 
@@ -38,7 +39,7 @@ def init_field(size: int, empty_cell: str = EMPTY_CELL) -> list[list]:
 
     """
     # TODO Можно выбрать своё представление поля, допустим строковое или одномерный список
-    return [[empty_cell] * size for _ in range(size)]
+    return EMPTY_CELL
 
 
 def draw_field(field):
@@ -47,8 +48,7 @@ def draw_field(field):
     :param field: Объект поля
     :return: None
     """
-    f = field
-    for row in f:
+    for row in field:
         for cell in row:
             print(cell, end="  ")
         print()
@@ -125,10 +125,16 @@ def is_win(field) -> bool:
     :param field:
     :return: bool
     """
-
+    # WIN_Lines = ((0, 1, 2), (3, 4, 5), (6, 7, 8), (0, 3, 6), (1, 4, 7), (2, 5, 8), (0, 4, 8), (2, 4, 6))
+    for w in WIN_Lines:
+        i, j = divmod(w[0], len(field))
+        i1, j1 = divmod(w[1], len(field))
+        i2, j2 = divmod(w[2], len(field))
+        if field[i][j] == field[i1][j1] == field[i2][j2]:
+            return True
+    return False
     # TODO Написать реализацию
 
-    return
 
 
 def change_player(current_player: str) -> str:
@@ -138,13 +144,12 @@ def change_player(current_player: str) -> str:
     :param current_player: Текущий игрок
     :return:
     """
+    if current_player == "X":
+        return "0"
+    else:
+        return "X"
 
-    # TODO Написать реализацию
-
-    return
-
-
-def game(player: str, size: int) -> Optional[str]:
+def game(player: str) -> Optional[str]:
     """
     Запускает игру
 
@@ -154,7 +159,24 @@ def game(player: str, size: int) -> Optional[str]:
     """
 
     # TODO Написать реализацию
-
+    field = init_field(3)
+    draw_field(field)
+    count = 0
+    while count < 9:
+        value_cell = int(input(f"Игрок {player} Куда будем ходить? "))
+        if value_cell < 1 or value_cell > 9:
+            print("Введите значения от 1 до 9")
+            continue
+        i, j = divmod(value_cell - 1, 3)
+        field[i][j] = player
+        draw_field(field)
+        if is_win(field):
+            print(f"Win {player}")
+            return player
+        player = change_player(player)
+        count +=1
+    print("Ничья")
+    return None
     """
     В работе использовать функции написанные выше
     
@@ -193,4 +215,5 @@ def app():
 
 
 if __name__ == "__main__":
-    app()
+    # app()
+    game("X")
